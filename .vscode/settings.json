@@ -1,0 +1,7 @@
+{
+  "javascript.format.enable": true,
+  "typescript.format.enable": true,
+  "tslint.enable": true,
+  "tslint.autoFixOnSave": true,
+  "typescript.tsdk": "node_modules/typescript/lib"
+}

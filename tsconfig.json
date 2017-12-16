@@ -1,0 +1,46 @@
+{
+  "compilerOptions": {
+    "target": "es2015",
+    "module": "es2015",
+    "outDir": "./build",
+    "sourceMap": true,
+    "jsx": "react",
+    "lib": [
+      "dom",
+      "es2015",
+      "es2016"
+    ],
+    "moduleResolution": "node",
+    "noEmitHelpers": true,
+    "importHelpers": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": false,
+    "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "plugins": [
+      {
+        "name": "typescript-styled-plugin"
+      }
+    ],
+    "types": [
+      "react",
+      "react-native",
+      "jest",
+      "enzyme",
+      "react-test-renderer"
+    ]
+  },
+  "include": [
+    "./src/"
+  ],
+  "exclude": [
+    "node_modules",
+    "build",
+    "jest"
+  ]
+}

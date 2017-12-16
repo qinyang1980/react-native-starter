@@ -1,0 +1,76 @@
+{
+  "extends": [
+    "tslint:recommended",
+    "tslint-react",
+    "tslint-eslint-rules"
+  ],
+  "rules": {
+    "trailing-comma": [
+      true,
+      {
+        "multiline": "never",
+        "singleline": "never"
+      }
+    ],
+    "quotemark": [
+      true,
+      "single",
+      "jsx-double",
+      "avoid-escape"
+    ],
+    "ter-indent": [
+      true,
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "indent": [
+      true,
+      "spaces",
+      2
+    ],
+    "interface-over-type-literal": [
+      false
+    ],
+    "interface-name": [
+      true,
+      "never-prefix"
+    ],
+    "member-access": true,
+    "object-curly-spacing": [
+      true
+    ],
+    "jsx-no-multiline-js": [
+      false
+    ],
+    "member-ordering": [
+      true,
+      {
+        "order": "fields-first",
+        "alphabetize": false
+      }
+    ],
+    "arrow-parens": [
+      true,
+      "ban-single-arg-parens"
+    ],
+    "object-literal-sort-keys": false,
+    "unified-signatures": true,
+    "max-line-length": [
+      true,
+      120
+    ],
+    "typedef": [
+      true,
+      "call-signature",
+      "parameter",
+      "member-variable-declaration"
+    ],
+    "semicolon": [
+      true,
+      "always",
+      "ignore-bound-class-methods"
+    ]
+  }
+}
