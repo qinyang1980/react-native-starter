@@ -36,11 +36,24 @@
   version "8.5.1"
   resolved "http://registry.npm.taobao.org/@types/node/download/@types/node-8.5.1.tgz#4ec3020bcdfe2abffeef9ba3fbf26fca097514b5"
 
+"@types/react-native@*":
+  version "0.51.3"
+  resolved "http://registry.npm.taobao.org/@types/react-native/download/@types/react-native-0.51.3.tgz#73aae1b9b2618ead387ede3a80a17980b0e0d1f0"
+  dependencies:
+    "@types/react" "*"
+
 "@types/react-native@^0.51.2":
   version "0.51.2"
   resolved "http://registry.npm.taobao.org/@types/react-native/download/@types/react-native-0.51.2.tgz#910005a8da3cf90cf42e74e80292ad8d3482e36d"
   dependencies:
     "@types/react" "*"
+
+"@types/react-navigation@^1.0.26":
+  version "1.0.26"
+  resolved "http://registry.npm.taobao.org/@types/react-navigation/download/@types/react-navigation-1.0.26.tgz#e92f61e8462a5e11bd94254eac516ce01a10b4e2"
+  dependencies:
+    "@types/react" "*"
+    "@types/react-native" "*"
 
 "@types/react-test-renderer@^16.0.0":
   version "16.0.0"
@@ -606,6 +619,13 @@ babel-plugin-transform-class-properties@^6.18.0, babel-plugin-transform-class-pr
     babel-plugin-syntax-class-properties "^6.8.0"
     babel-runtime "^6.22.0"
     babel-template "^6.24.1"
+
+babel-plugin-transform-define@^1.3.0:
+  version "1.3.0"
+  resolved "http://registry.npm.taobao.org/babel-plugin-transform-define/download/babel-plugin-transform-define-1.3.0.tgz#94c5f9459c810c738cc7c50cbd44a31829d6f319"
+  dependencies:
+    lodash "4.17.4"
+    traverse "0.6.6"
 
 babel-plugin-transform-es2015-arrow-functions@^6.5.0, babel-plugin-transform-es2015-arrow-functions@^6.8.0:
   version "6.22.0"
@@ -1225,6 +1245,10 @@ chokidar@^1.6.0:
 ci-info@^1.0.0:
   version "1.1.2"
   resolved "http://registry.npm.taobao.org/ci-info/download/ci-info-1.1.2.tgz#03561259db48d0474c8bdc90f5b47b068b6bbfb4"
+
+clamp@^1.0.1:
+  version "1.0.1"
+  resolved "http://registry.npm.taobao.org/clamp/download/clamp-1.0.1.tgz#66a0e64011816e37196828fdc8c8c147312c8634"
 
 class-utils@^0.3.5:
   version "0.3.5"
@@ -2673,7 +2697,7 @@ hoist-non-react-statics@^1.2.0:
   version "1.2.0"
   resolved "http://registry.npm.taobao.org/hoist-non-react-statics/download/hoist-non-react-statics-1.2.0.tgz#aa448cf0986d55cc40773b17174b7dd066cb7cfb"
 
-hoist-non-react-statics@^2.3.1:
+hoist-non-react-statics@^2.2.0, hoist-non-react-statics@^2.3.1:
   version "2.3.1"
   resolved "http://registry.npm.taobao.org/hoist-non-react-statics/download/hoist-non-react-statics-2.3.1.tgz#343db84c6018c650778898240135a1420ee22ce0"
 
@@ -3651,13 +3675,13 @@ lodash.templatesettings@^3.0.0:
     lodash._reinterpolate "^3.0.0"
     lodash.escape "^3.0.0"
 
+lodash@4.17.4, lodash@^4.14.0, lodash@^4.15.0, lodash@^4.16.6, lodash@^4.17.4, lodash@^4.2.0, lodash@^4.3.0, lodash@^4.6.1:
+  version "4.17.4"
+  resolved "http://registry.npm.taobao.org/lodash/download/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
+
 lodash@^3.5.0:
   version "3.10.1"
   resolved "http://registry.npm.taobao.org/lodash/download/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
-
-lodash@^4.14.0, lodash@^4.15.0, lodash@^4.16.6, lodash@^4.17.4, lodash@^4.2.0, lodash@^4.3.0, lodash@^4.6.1:
-  version "4.17.4"
-  resolved "http://registry.npm.taobao.org/lodash/download/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
 
 lodash@~1.0.1:
   version "1.0.2"
@@ -4399,6 +4423,12 @@ path-root@^0.1.1:
   dependencies:
     path-root-regex "^0.1.0"
 
+path-to-regexp@^1.7.0:
+  version "1.7.0"
+  resolved "http://registry.npm.taobao.org/path-to-regexp/download/path-to-regexp-1.7.0.tgz#59fde0f435badacba103a84e9d3bc64e96b9937d"
+  dependencies:
+    isarray "0.0.1"
+
 path-type@^1.0.0:
   version "1.1.0"
   resolved "http://registry.npm.taobao.org/path-type/download/path-type-1.1.0.tgz#59c44f7ee491da704da415da5a4070ba4f8fe441"
@@ -4740,7 +4770,13 @@ react-native-dismiss-keyboard@1.0.0:
   version "1.0.0"
   resolved "http://registry.npm.taobao.org/react-native-dismiss-keyboard/download/react-native-dismiss-keyboard-1.0.0.tgz#32886242b3f2317e121f3aeb9b0a585e2b879b49"
 
-react-native-drawer-layout@~1.3.0:
+react-native-drawer-layout-polyfill@^1.3.2:
+  version "1.3.2"
+  resolved "http://registry.npm.taobao.org/react-native-drawer-layout-polyfill/download/react-native-drawer-layout-polyfill-1.3.2.tgz#192c84d7a5a6b8a6d2be2c7daa5e4164518d0cc7"
+  dependencies:
+    react-native-drawer-layout "1.3.2"
+
+react-native-drawer-layout@1.3.2, react-native-drawer-layout@~1.3.0:
   version "1.3.2"
   resolved "http://registry.npm.taobao.org/react-native-drawer-layout/download/react-native-drawer-layout-1.3.2.tgz#b9740d7663a1dc4f88a61b9c6d93d2d948ea426e"
   dependencies:
@@ -4761,6 +4797,12 @@ react-native-swipeout@^2.2.2:
     create-react-class "^15.6.0"
     prop-types "^15.5.10"
     react-tween-state "^0.1.5"
+
+react-native-tab-view@^0.0.70:
+  version "0.0.70"
+  resolved "http://registry.npm.taobao.org/react-native-tab-view/download/react-native-tab-view-0.0.70.tgz#1dd2ded32acd0cb6bfef38d26e53675db733b37b"
+  dependencies:
+    prop-types "^15.5.10"
 
 react-native@^0.51.0:
   version "0.51.0"
@@ -4819,6 +4861,18 @@ react-native@^0.51.0:
     xcode "^0.9.1"
     xmldoc "^0.4.0"
     yargs "^9.0.0"
+
+react-navigation@^1.0.0-beta.21:
+  version "1.0.0-beta.21"
+  resolved "http://registry.npm.taobao.org/react-navigation/download/react-navigation-1.0.0-beta.21.tgz#086c504ba84c966ef8db898baef6fa14ff45a06f"
+  dependencies:
+    babel-plugin-transform-define "^1.3.0"
+    clamp "^1.0.1"
+    hoist-non-react-statics "^2.2.0"
+    path-to-regexp "^1.7.0"
+    prop-types "^15.5.10"
+    react-native-drawer-layout-polyfill "^1.3.2"
+    react-native-tab-view "^0.0.70"
 
 react-proxy@^1.1.7:
   version "1.1.8"
@@ -5854,6 +5908,10 @@ tough-cookie@^2.3.2, tough-cookie@~2.3.0, tough-cookie@~2.3.3:
 tr46@~0.0.3:
   version "0.0.3"
   resolved "http://registry.npm.taobao.org/tr46/download/tr46-0.0.3.tgz#8184fd347dac9cdc185992f3a6622e14b9d9ab6a"
+
+traverse@0.6.6:
+  version "0.6.6"
+  resolved "http://registry.npm.taobao.org/traverse/download/traverse-0.6.6.tgz#cbdf560fd7b9af632502fed40f918c157ea97137"
 
 trim-right@^1.0.1:
   version "1.0.1"

@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import { Text } from 'react-native';
 import styled from 'styled-components/native';
 
-// 接口
+// interface
 ///////////////////////////////////////////////////
 export interface Props {
   total: number;
@@ -13,10 +13,10 @@ export interface Props {
   decrement: () => void;
 }
 
-// 组件实现
+// component
 ///////////////////////////////////////////////////
 @observer
-export default class Counter extends Component<{ appState: Props }, {}> {
+export class Counter extends Component<{ appState: Props }, {}> {
   public render(): JSX.Element {
     return (
       <Container>
