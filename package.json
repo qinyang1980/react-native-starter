@@ -67,7 +67,7 @@
     "testPathIgnorePatterns": [
       "\\.snap$",
       "<rootDir>/node_modules/",
-      "<rootDir>/lib/"
+      "<rootDir>/build"
     ],
     "cacheDirectory": ".jest/cache"
   }

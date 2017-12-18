@@ -16,15 +16,15 @@ export interface Props {
 // component
 ///////////////////////////////////////////////////
 @observer
-export class Counter extends Component<{ appState: Props }, {}> {
+export class Counter extends Component<{ store: Props }, {}> {
   public render(): JSX.Element {
     return (
       <Container>
         <Title>
           Welcome to React Native Reactive!
         </Title>
-        <Text>Counter: {this.props.appState.count}</Text>
-        <Text>Total clicks: {this.props.appState.total}</Text>
+        <Text>Counter: {this.props.store.count}</Text>
+        <Text>Total clicks: {this.props.store.total}</Text>
         <Button type="primary" onClick={this.handleInc}>+</Button>
         <Button type="warning" onClick={this.handleDec}>-</Button>
       </Container>
@@ -32,11 +32,11 @@ export class Counter extends Component<{ appState: Props }, {}> {
   }
 
   private handleInc = () => {
-    this.props.appState.increment();
+    this.props.store.increment();
   };
 
   private handleDec = () => {
-    this.props.appState.decrement();
+    this.props.store.decrement();
   };
 }
 
