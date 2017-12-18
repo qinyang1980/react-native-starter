@@ -7,7 +7,7 @@ import renderer from 'react-test-renderer';
 
 import Hello from '../components/Hello';
 
-describe('Hello', () => {
+describe('HelloTesting', () => {
   beforeEach(() => {
     // disable the warn & error
     // tslint:disable

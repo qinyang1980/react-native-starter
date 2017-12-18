@@ -50,7 +50,7 @@ const Container = styled.View`
   background-color: #fff;
 `;
 
-const Title = styled.Text`
+export const Title = styled.Text`
   font-size: 20;
   text-align: center;
   margin-bottom: 5;
