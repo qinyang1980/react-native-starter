@@ -5,7 +5,7 @@ import { Button, Text } from 'react-native';
 // Note: test renderer must be required after react-native.
 import renderer from 'react-test-renderer';
 
-import Hello from '../components/Hello';
+import Hello from '../../components/Hello';
 
 describe('HelloTesting', () => {
   beforeEach(() => {

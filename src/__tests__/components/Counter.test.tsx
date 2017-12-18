@@ -5,7 +5,7 @@ import { Text } from 'react-native';
 
 // Note: test renderer must be required after react-native.
 import renderer from 'react-test-renderer';
-import { Counter, Title } from '../components';
+import { Counter, Title } from '../../components';
 
 describe('CounterTesting', () => {
   beforeEach(() => {
