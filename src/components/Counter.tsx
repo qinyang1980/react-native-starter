@@ -20,13 +20,15 @@ export class Counter extends Component<{ store: Props }, {}> {
   public render(): JSX.Element {
     return (
       <Container>
-        <Title>
-          Welcome to React Native Reactive!
-        </Title>
+        <Title>Welcome to React Native Reactive!</Title>
         <Text>Counter: {this.props.store.count}</Text>
         <Text>Total clicks: {this.props.store.total}</Text>
-        <Button type="primary" onClick={this.handleInc}>+</Button>
-        <Button type="warning" onClick={this.handleDec}>-</Button>
+        <Button type="primary" onClick={this.handleInc}>
+          +
+        </Button>
+        <Button type="warning" onClick={this.handleDec}>
+          -
+        </Button>
       </Container>
     );
   }
@@ -50,8 +52,10 @@ const Container = styled.View`
   background-color: #fff;
 `;
 
-export const Title = styled.Text`
+const Title = styled.Text`
   font-size: 20;
   text-align: center;
   margin-bottom: 5;
 `;
+
+export const TestUtil = { Title, Text, Button, Container };
