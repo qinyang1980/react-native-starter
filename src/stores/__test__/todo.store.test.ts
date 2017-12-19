@@ -1,4 +1,4 @@
-import { TodoStore } from '../../stores/todo.store';
+import { TodoStore } from '../todo.store';
 
 describe('TodoStore', () => {
 

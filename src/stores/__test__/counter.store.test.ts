@@ -1,4 +1,4 @@
-import { CounterStore } from '../../stores/counter.store';
+import { CounterStore } from '../counter.store';
 
 // tslint:disable
 
