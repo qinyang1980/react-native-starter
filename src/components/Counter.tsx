@@ -6,7 +6,7 @@ import styled from 'styled-components/native';
 
 // interface
 ///////////////////////////////////////////////////
-export interface Props {
+export interface CounterProps {
   total: number;
   count: number;
   increment: () => void;
@@ -16,7 +16,7 @@ export interface Props {
 // component
 ///////////////////////////////////////////////////
 @observer
-export class Counter extends Component<{ store: Props }, {}> {
+export class Counter extends Component<{ store: CounterProps }, {}> {
   public render(): JSX.Element {
     return (
       <Container>

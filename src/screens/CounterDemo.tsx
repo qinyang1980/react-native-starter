@@ -1,12 +1,13 @@
+import { inject } from 'mobx-react';
 import React, { Component } from 'react';
 import { Counter } from '../components';
-import { CounterStore } from '../stores/counter.store';
+import { STORE_COUNTER } from '../constants';
 
-const store = new CounterStore();
+@inject(STORE_COUNTER)
 export class CounterDemo extends Component {
   public render(): JSX.Element {
     return (
-      <Counter store={store} />
+      <Counter store={this.props[STORE_COUNTER]} />
     );
   }
 }
