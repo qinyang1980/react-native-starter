@@ -4,7 +4,6 @@ import { Button, Text } from 'react-native';
 
 // Note: test renderer must be required after react-native.
 import renderer from 'react-test-renderer';
-
 import Hello from '../../components/Hello';
 
 describe('HelloTesting', () => {
@@ -16,7 +15,8 @@ describe('HelloTesting', () => {
   });
 
   it('renders correctly', () => {
-    renderer.create(<Hello name="World" />);
+    const tree = renderer.create(<Hello name="World" />).toJSON();
+    expect(tree).toMatchSnapshot();
   });
 
   it('renders correctly with defaults', () => {

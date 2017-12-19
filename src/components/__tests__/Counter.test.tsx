@@ -15,7 +15,8 @@ describe('CounterTesting', () => {
 
   it('renders correctly', () => {
     const store = { count: 0, total: 0, increment: () => { }, decrement: () => { } };
-    renderer.create(<Counter store={store} />);
+    const tree = renderer.create(<Counter store={store} />).toJSON();
+    expect(tree).toMatchSnapshot();
   });
 
   it('structure correctly', () => {
@@ -39,22 +40,25 @@ describe('CounterTesting', () => {
 
   it('behaviors correctly', () => {
     let count = 0, total = 0;
-    const incrementClick = jest.fn(() => {count++;total++});
-    const decrementClick = jest.fn(() => {count--;total++});
-    const store = { count: count, total: total, increment: incrementClick, decrement: decrementClick };
+    const increment = jest.fn(() => { count++; total++ });
+    const decrement = jest.fn(() => { count--; total++ });
+    const store = { count, total, increment, decrement };
 
-    // const wrapper = shallow(<Counter store={store} />);
+    const wrapper = shallow(<Counter store={store} />);
 
-    // wrapper.find(Button).at(1).props().onPress();
+    const button1Click: any = (wrapper.find(TestUtil.Button).at(0).prop("onClick") as any);
+    const button2Click: any = (wrapper.find(TestUtil.Button).at(1).prop("onClick") as any);
+    
+    // simulate the clicks
+    button1Click();
+    button1Click();
+    button1Click();
+    button2Click();
+    button2Click();
 
-    // expect(onButtonClick.mock.calls.length).toBe(1);
-
-    // expect(wrapper.find(Button)).toHaveLength(2);
-    // expect(wrapper.find(Button).first().prop('title')).toBe('-');
-    // expect(wrapper.find(Button).at(1).prop('title')).toBe('+');
-
-
-    // expect(wrapper.find(T).render().text()).toContain('Hello');
-    // expect(wrapper.find(Text).render().text()).toEqual('Hello World!');
+    expect(increment.mock.calls.length).toBe(3);
+    expect(decrement.mock.calls.length).toBe(2);
+    expect(count).toBe(1);
+    expect(total).toBe(5);
   });
 });
