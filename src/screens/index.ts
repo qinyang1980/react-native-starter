@@ -1,3 +1,2 @@
 export * from './Home';
-export * from './Details';
-export * from './App';
+export * from './CounterDemo';

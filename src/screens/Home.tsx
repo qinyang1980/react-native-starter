@@ -1,17 +1,15 @@
+import { Button } from 'antd-mobile';
 import React from 'react';
-import { Button, Text } from 'react-native';
+import { Text } from 'react-native';
 import styled from 'styled-components/native';
 
 export const Home = ({ navigation }) => {
-  const onPress = () => navigation.navigate('Details');
+  const onClick = () => navigation.navigate('CounterDemo');
 
   return (
     <Container>
       <Text>Home Screen</Text>
-      <Button
-        onPress={onPress}
-        title="Go to details"
-      />
+      <Button type="primary" onClick={onClick}>Go to CounterDemo Screen.</Button>
     </Container>
   );
 };

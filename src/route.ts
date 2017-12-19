@@ -1,5 +1,5 @@
 import { StackNavigator } from 'react-navigation';
-import { Details, Home } from './screens';
+import { CounterDemo, Home } from './screens';
 
 const RootNavigator = StackNavigator({
   Home: {
@@ -8,10 +8,10 @@ const RootNavigator = StackNavigator({
       headerTitle: 'Home'
     }
   },
-  Details: {
-    screen: Details,
+  CounterDemo: {
+    screen: CounterDemo,
     navigationOptions: {
-      headerTitle: 'Details'
+      headerTitle: 'Counter Demo'
     }
   }
 });
