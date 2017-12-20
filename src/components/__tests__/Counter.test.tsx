@@ -14,7 +14,7 @@ describe('CounterTesting', () => {
   });
 
   it('renders correctly', () => {
-    const store = { count: 0, total: 0, increment: () => { }, decrement: () => { } };
+    const store = { count: 0, total: 0, increment: () => { }, decrement: () => { }, reset: () => { } };
     const tree = renderer.create(<Counter store={store} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
@@ -22,7 +22,8 @@ describe('CounterTesting', () => {
   it('structure correctly', () => {
     const incrementClick = jest.fn();
     const decrementClick = jest.fn();
-    const store = { count: 3, total: 8, increment: incrementClick, decrement: decrementClick };
+    const resetClick = jest.fn();
+    const store = { count: 3, total: 8, increment: incrementClick, decrement: decrementClick, reset: resetClick };
 
     const wrapper = shallow(<Counter store={store} />);
 
@@ -42,13 +43,14 @@ describe('CounterTesting', () => {
     let count = 0, total = 0;
     const increment = jest.fn(() => { count++; total++ });
     const decrement = jest.fn(() => { count--; total++ });
-    const store = { count, total, increment, decrement };
+    const reset = jest.fn(() => { count = 0; total = 0; })
+    const store = { count, total, increment, decrement, reset };
 
     const wrapper = shallow(<Counter store={store} />);
 
     const button1Click: any = (wrapper.find(TestUtil.Button).at(0).prop("onClick") as any);
     const button2Click: any = (wrapper.find(TestUtil.Button).at(1).prop("onClick") as any);
-    
+
     // simulate the clicks
     button1Click();
     button1Click();
